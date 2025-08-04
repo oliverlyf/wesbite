@@ -64,6 +64,24 @@
       color: #fff;
     }
 
+    nav ul {
+  display: flex;
+  flex-wrap: nowrap; /* prevents wrapping to two lines */
+  overflow-x: auto;   /* enables scroll on small screens */
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #ffd700;
+}
+
+nav li {
+  flex: 0 0 auto; /* don’t shrink */
+  padding: 1rem;
+  position: relative;
+  white-space: nowrap;
+}
+
     .dropdown-content {
       display: none;
       position: absolute;
