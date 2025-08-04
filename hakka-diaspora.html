@@ -20,15 +20,8 @@
     header {
       background-color: #cc0000;
       color: #ffffff;
-      padding: 1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 1.75rem;
-      margin: 0;
+      padding: 1.5rem;
+      text-align: center;
     }
 
     header img.flag {
@@ -46,15 +39,14 @@
       background-color: #ffd700;
       overflow-x: auto;
       white-space: nowrap;
-      width: 100%;
     }
 
     nav ul {
-      display: flex;
+      display: inline-flex;
       justify-content: center;
       list-style: none;
       padding: 0;
-      margin: 0;
+      margin: 0 auto;
     }
 
     nav li {
@@ -69,6 +61,7 @@
       text-decoration: none;
       font-weight: bold;
       color: #333;
+      background-color: #ffd700;
       transition: background-color 0.3s ease;
       white-space: nowrap;
     }
@@ -116,13 +109,19 @@
       margin-bottom: 1rem;
     }
 
-    footer {
-      background-color: #f2f2f2;
-      padding: 1.5rem 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-      color: #666;
+    .example-image {
+      margin-bottom: 2.5rem;
+    }
+
+    .example-image p {
+      margin: 1rem 0;
+    }
+
+    .example-image img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #000;
+      margin-top: 1rem;
     }
 
     nav::-webkit-scrollbar {
@@ -135,13 +134,20 @@
 
     @media (max-width: 768px) {
       nav ul {
+        display: flex;
         justify-content: flex-start;
       }
-
-      nav a {
-        padding: 0.75rem;
-      }
     }
+
+    footer {
+      background-color: #f2f2f2;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      color: #666;
+    }
+
   </style>
 </head>
 <body>
