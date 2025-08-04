@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hakka Mauritian Diaspora</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    header {
+      background-color: #cc0000;
+      color: #ffffff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.75rem;
+      margin: 0;
+    }
+
+    header img.flag {
+      height: 40px;
+      width: auto;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    header img.flag:hover {
+      transform: scale(1.1);
+      opacity: 0.85;
+    }
+
+    nav {
+      background-color: #ffd700;
+      overflow-x: auto;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    nav a,
+    nav .dropbtn {
+      display: inline-block;
+      padding: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    nav a:hover,
+    nav .dropbtn:hover {
+      background-color: #cc0000;
+      color: #fff;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff8dc;
+      min-width: 160px;
+      z-index: 1;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: #333;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ffd700;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: #cc0000;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      color: #666;
+    }
+
+    nav::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    nav::-webkit-scrollbar-thumb {
+      background-color: #cc0000;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        justify-content: flex-start;
+      }
+
+      nav a {
+        padding: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hakka Mauritians 客家</h1>
+  <img class="flag" src="images/mauritius-flag.png" alt="Mauritian Flag" title="Mauritius" />
+</header>
+
+<nav>
+  <ul>
+    <li class="dropdown"><a href="index.html" class="dropbtn">Welcome</a></li>
+    <li class="dropdown"><a href="hakka.html" class="dropbtn">Hakka Mauritians</a></li>
+    <li class="dropdown"><a href="stories.html" class="dropbtn">Your Stories</a></li>
+    <li class="dropdown"><a href="diaspora.html" class="dropbtn">Other Hakka Diaspora</a></li>
+    <li class="dropdown"><a href="language.html" class="dropbtn">Language</a></li>
+    <li class="dropdown"><a href="history.html" class="dropbtn">History</a></li>
+    <li class="dropdown"><a href="food.html" class="dropbtn">Food</a></li>
+    <li class="dropdown"><a href="sights-town.html" class="dropbtn">Sights - In Town</a></li>
+    <li class="dropdown"><a href="sights-field.html" class="dropbtn">Further Afield</a></li>
+    <li class="dropdown"><a href="architecture.html" class="dropbtn">Architecture</a></li>
+    <li class="dropdown"><a href="health.html" class="dropbtn">Health</a></li>
+    <li class="dropdown"><a href="visit.html" class="dropbtn">Visit</a></li>
+    <li class="dropdown"><a href="contact.html" class="dropbtn">Contact</a></li>
+    <li class="dropdown"><a href="about.html" class="dropbtn">About</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+  <main>
+    <h2>Hakka Mauritian Diaspora</h2>
+    <p>
+  I am very grateful that Hakkas across the world are taking the time to visit this site.
+  So far I have received emails from people in:
+</p>
+
+<ul>
+  <li>Australia</li>
+  <li>Belgium</li>
+  <li>Canada</li>
+  <li>China</li>
+  <li>France</li>
+  <li>Hong Kong</li>
+  <li>Luxembourg</li>
+  <li>Malaysia</li>
+  <li>Mauritius</li>
+  <li>Reunion</li>
+  <li>Singapore</li>
+  <li>South Africa</li>
+  <li>Thailand</li>
+  <li>UK</li>
+  <li>USA</li>
+</ul>
+
+<p>
+  If you are a Hakka (Mauritian or otherwise) living elsewhere in the world,
+  please do email me so that we can find out how far our paths have diverged!
+</p>
+
+  </main>
+</div>
+
+<footer>
+  <p>© 2025 Hakka Mauritians 客家. All rights reserved.</p>
+  <p>Contact: hakkamauritians@gmail.com</p>
+</footer>
+
+</body>
+</html>
