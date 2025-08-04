@@ -8,16 +8,17 @@
     body {
       font-family: "Segoe UI", sans-serif;
       margin: 0;
-      background-color: #f5f5f5;
+      background-color: #ffffff;
+      color: #333333;
     }
     header {
-      background-color: #003366;
-      color: white;
+      background-color: #cc0000;
+      color: #ffffff;
       padding: 1.5rem;
       text-align: center;
     }
     nav {
-      background-color: #eeeeee;
+      background-color: #ffd700;
       padding: 1rem;
       display: flex;
       flex-wrap: wrap;
@@ -26,14 +27,21 @@
     }
     nav a {
       text-decoration: none;
-      color: #003366;
+      color: #333333;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #cc0000;
     }
     main {
       max-width: 1000px;
       margin: auto;
       padding: 2rem;
-      background-color: white;
+      background-color: #ffffff;
+    }
+    h2 {
+      color: #cc0000;
     }
     section.upload {
       margin-top: 2rem;
@@ -51,6 +59,7 @@
       height: 80px;
       padding: 0.5rem;
       resize: vertical;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
@@ -62,7 +71,6 @@
 
 <nav>
   <a href="#">Welcome</a>
-  <a href="#">About</a>
   <a href="#">Hakka Mauritians</a>
   <a href="#">Your Stories</a>
   <a href="#">Other Hakka Diaspora</a>
@@ -74,6 +82,8 @@
   <a href="#">Architecture</a>
   <a href="#">Health</a>
   <a href="#">Visit</a>
+  <a href="#">Contact</a>
+  <a href="#">About</a>
 </nav>
 
 <main>
