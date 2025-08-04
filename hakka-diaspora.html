@@ -149,6 +149,24 @@
       }
     }
 
+    .country-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem 1rem;
+  list-style: none;
+  padding: 1rem 0;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.country-list li {
+  background-color: #f9f9f9;
+  border-left: 4px solid #cc0000;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+}
+
     footer {
       background-color: #f2f2f2;
       padding: 1.5rem 1rem;
@@ -193,7 +211,7 @@
   So far I have received emails from people in:
 </p>
 
-<ul>
+<ul class="country-list">
   <li>Australia</li>
   <li>Belgium</li>
   <li>Canada</li>
