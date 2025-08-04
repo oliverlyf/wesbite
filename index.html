@@ -1,51 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hakka Mauritians 客家</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", sans-serif;
       margin: 0;
-      padding: 2rem;
       background-color: #f5f5f5;
     }
     header {
-      text-align: center;
-      padding: 2rem 0;
-      background-color: #222;
+      background-color: #003366;
       color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #eeeeee;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
     }
     main {
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
-      background-color: white;
       padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: white;
     }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
+    section.upload {
+      margin-top: 2rem;
+    }
+    .picture-block {
+      margin-bottom: 2rem;
+    }
+    input[type="file"] {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    textarea {
+      width: 100%;
+      height: 80px;
+      padding: 0.5rem;
+      resize: vertical;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to My Website</h1>
-  </header>
+<header>
+  <h1>Hakka Mauritians 客家</h1>
+</header>
 
-  <main>
-    <p>This is a basic HTML template. You can build on it with your own content, styles, and scripts.</p>
-  </main>
+<nav>
+  <a href="#">Welcome</a>
+  <a href="#">About</a>
+  <a href="#">Hakka Mauritians</a>
+  <a href="#">Your Stories</a>
+  <a href="#">Other Hakka Diaspora</a>
+  <a href="#">Language</a>
+  <a href="#">History</a>
+  <a href="#">Food</a>
+  <a href="#">Sights - In Town</a>
+  <a href="#">Further Afield</a>
+  <a href="#">Architecture</a>
+  <a href="#">Health</a>
+  <a href="#">Visit</a>
+</nav>
 
-  <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
-  </footer>
+<main>
+  <h2>Upload Your Images & Stories</h2>
+  <section class="upload">
+    <div class="picture-block">
+      <label for="img1">Upload Picture 1:</label>
+      <input type="file" id="img1" name="img1">
+      <label for="desc1">Description:</label>
+      <textarea id="desc1" name="desc1" placeholder="Write something about this image..."></textarea>
+    </div>
+    <div class="picture-block">
+      <label for="img2">Upload Picture 2:</label>
+      <input type="file" id="img2" name="img2">
+      <label for="desc2">Description:</label>
+      <textarea id="desc2" name="desc2" placeholder="Write something about this image..."></textarea>
+    </div>
+  </section>
+</main>
 
 </body>
 </html>
