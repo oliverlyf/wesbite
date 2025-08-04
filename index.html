@@ -5,57 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hakka Mauritians 客家</title>
   <style>
-    header img.flag {
-  height: 40px;
-  width: auto;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-header img.flag:hover {
-  transform: scale(1.1);
-  opacity: 0.85;
-}
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: "Segoe UI", sans-serif;
       background-color: #ffffff;
       color: #333333;
-      display: flex;
-      flex-direction: row;
-    }
-
-    nav {
-      width: 220px;
-      background-color: #ffd700;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      height: 100vh;
-      box-sizing: border-box;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333333;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #cc0000;
-    }
-
-    .content {
-      flex-grow: 1;
-      padding: 2rem;
     }
 
     header {
       background-color: #cc0000;
       color: #ffffff;
-      padding: 1.5rem;
       text-align: center;
+      padding: 1.5rem;
+      position: relative;
+    }
+
+    header img.flag {
+      height: 40px;
+      width: auto;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    header img.flag:hover {
+      transform: scale(1.1);
+      opacity: 0.85;
+    }
+
+    nav {
+      background-color: #ffd700;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+
+    .nav-container a {
+      text-decoration: none;
+      color: #333333;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-container a:hover {
+      background-color: #cc0000;
+      color: white;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      padding: 1rem;
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
+
+      .nav-container.show {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: flex;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+
+    .content {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     h2 {
@@ -87,45 +134,60 @@ header img.flag:hover {
 </head>
 <body>
 
+<header>
+  <h1>Hakka Mauritians 客家</h1>
+  <img class="flag" src="images/mauritius-flag.png" alt="Mauritian Flag" title="Mauritius" />
+  <div class="nav-toggle" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</header>
+
 <nav>
-  <a href="index.html">Welcome</a>
-  <a href="hakka.html">Hakka Mauritians</a>
-  <a href="stories.html">Your Stories</a>
-  <a href="diaspora.html">Other Hakka Diaspora</a>
-  <a href="language.html">Language</a>
-  <a href="history.html">History</a>
-  <a href="food.html">Food</a>
-  <a href="sights-town.html">Sights - In Town</a>
-  <a href="sights-field.html">Further Afield</a>
-  <a href="architecture.html">Architecture</a>
-  <a href="health.html">Health</a>
-  <a href="visit.html">Visit</a>
-  <a href="contact.html">Contact</a>
-  <a href="about.html">About</a>
+  <div class="nav-container" id="navMenu">
+    <a href="index.html">Welcome</a>
+    <a href="hakka.html">Hakka Mauritians</a>
+    <a href="stories.html">Your Stories</a>
+    <a href="diaspora.html">Other Hakka Diaspora</a>
+    <a href="language.html">Language</a>
+    <a href="history.html">History</a>
+    <a href="food.html">Food</a>
+    <a href="sights-town.html">Sights - In Town</a>
+    <a href="sights-field.html">Further Afield</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="health.html">Health</a>
+    <a href="visit.html">Visit</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+  </div>
 </nav>
 
 <div class="content">
-  <header>
-  <h1>Hakka Mauritians 客家</h1>
-  <img class="flag" src="images/mauritius-flag.png" alt="Mauritian Flag" title="Mauritius" />
-  </header>
-
   <main>
     <h2>Welcome! 歡迎 : 欢迎！</h2>
-  
-  <!-- Example Picture 1 -->
-  <section class="example-image">
-    <img src="images/Ngai+he+hagka+ngin!.jpg?raw=true" alt="I am a Hakka person" style="max-width: 100%; height: auto;" />
-    <p><strong>Ngai(2) hê(4) hag(5) ga(1) ngin(2)</strong> — "I am a Hakka person"</p>
-  </section>
 
-  <!-- Example Picture 2 -->
-  <section class="example-image">
-    <p><strong>Thank you for visiting!</strong><br>
-    This website is for anyone interested in Moiyan (officially Meixian), ancestral home of many Hakka people around the world, including the majority of Hakka-Mauritians.</p>
-    <img src="images/IMG_6907.jpg?raw=true" alt="Moiyan ancestral home" style="max-width: 100%; height: auto;" />
-  </section>
+    <!-- Example Picture 1 -->
+    <section class="example-image">
+      <img src="images/Ngai+he+hagka+ngin!.jpg?raw=true" alt="I am a Hakka person" style="max-width: 100%; height: auto;" />
+      <p><strong>Ngai(2) hê(4) hag(5) ga(1) ngin(2)</strong> — "I am a Hakka person"</p>
+    </section>
+
+    <!-- Example Picture 2 -->
+    <section class="example-image">
+      <p><strong>Thank you for visiting!</strong><br>
+      This website is for anyone interested in Moiyan (officially Meixian), ancestral home of many Hakka people around the world, including the majority of Hakka-Mauritians.</p>
+      <img src="images/IMG_6907.jpg?raw=true" alt="Moiyan ancestral home" style="max-width: 100%; height: auto;" />
+    </section>
   </main>
 </div>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("show");
+  }
+</script>
+
 </body>
 </html>
