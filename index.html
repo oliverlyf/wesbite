@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hakka Mauritians 客家</title>
   <style>
     * {
@@ -15,18 +15,21 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #ffffff;
       color: #333333;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      text-align: center;
     }
 
     header {
       background-color: #cc0000;
       color: #ffffff;
-      padding: 1.5rem;
-      text-align: center;
+      padding: 2rem;
     }
 
     header img.flag {
-      height: 40px;
+      height: 50px;
       width: auto;
+      margin-top: 1rem;
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
@@ -35,19 +38,14 @@
       opacity: 0.85;
     }
 
-    .nav-container {
+    nav {
       background-color: #ffd700;
       overflow-x: auto;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: nowrap;
       white-space: nowrap;
     }
 
     nav .dropdown {
+      display: inline-block;
       position: relative;
     }
 
@@ -57,7 +55,7 @@
       color: #333;
       font-weight: bold;
       text-decoration: none;
-      padding: 1rem;
+      padding: 1.25rem;
       transition: background-color 0.3s ease;
     }
 
@@ -68,19 +66,17 @@
     }
 
     nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
       flex-wrap: nowrap;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      background-color: #ffd700;
+      justify-content: center;
     }
 
     nav li {
       flex: 0 0 auto;
-      padding: 1rem;
       position: relative;
-      white-space: nowrap;
     }
 
     .dropdown-content {
@@ -90,12 +86,12 @@
       min-width: 160px;
       z-index: 1;
       box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      text-align: left;
     }
 
     .dropdown-content a {
       display: block;
       padding: 0.75rem 1rem;
-      text-align: left;
       color: #333;
       white-space: normal;
     }
@@ -108,37 +104,10 @@
       display: block;
     }
 
-    .language-search {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-      background-color: #f0f0f0;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    select, input[type="search"] {
-      padding: 0.5rem;
-      font-size: 1rem;
-    }
-
     .content {
-      padding: 2rem;
+      padding: 3rem 2rem;
       max-width: 1000px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .example-image {
-      margin-bottom: 2rem;
-    }
-
-    .example-image img {
-      max-width: 100%;
-      height: auto;
-      border: 1px solid black;
-      margin-top: 1rem;
+      margin: 0 auto;
     }
 
     h2 {
@@ -146,12 +115,40 @@
       margin-bottom: 1rem;
     }
 
+    .example-image {
+      margin-bottom: 3rem;
+    }
+
+    .example-image img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #000;
+      margin-top: 1rem;
+    }
+
     footer {
-      background-color: #cc0000;
-      color: white;
-      text-align: center;
-      padding: 1rem;
+      background-color: #f2f2f2;
+      color: #333;
+      padding: 1.5rem;
       margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      nav .dropdown {
+        flex: 0 0 auto;
+      }
+
+      nav a,
+      nav .dropbtn {
+        padding: 1rem 0.75rem;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -162,127 +159,126 @@
   <img class="flag" src="images/mauritius-flag.png" alt="Mauritian Flag" title="Mauritius" />
 </header>
 
-<div class="language-search">
-  <label for="language">🌐 Language:</label>
-  <select id="language" onchange="changeLanguage(this.value)">
-    <option value="en">English</option>
-    <option value="fr">Français</option>
-    <option value="hak">Hakka</option>
-    <option value="zh">中文</option>
-  </select>
+<nav>
+  <div class="dropdown">
+    <a href="index.html" class="dropbtn">Welcome</a>
+    <div class="dropdown-content">
+      <a href="#">Subitem 1</a>
+      <a href="#">Subitem 2</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="hakka.html" class="dropbtn">Hakka Mauritians</a>
+    <div class="dropdown-content">
+      <a href="#">History</a>
+      <a href="#">Culture</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="stories.html" class="dropbtn">Your Stories</a>
+    <div class="dropdown-content">
+      <a href="#">Share</a>
+      <a href="#">Read</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="diaspora.html" class="dropbtn">Other Hakka Diaspora</a>
+    <div class="dropdown-content">
+      <a href="#">Asia</a>
+      <a href="#">Africa</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="language.html" class="dropbtn">Language</a>
+    <div class="dropdown-content">
+      <a href="#">Phrases</a>
+      <a href="#">Audio</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="history.html" class="dropbtn">History</a>
+    <div class="dropdown-content">
+      <a href="#">Timeline</a>
+      <a href="#">Documents</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="food.html" class="dropbtn">Food</a>
+    <div class="dropdown-content">
+      <a href="#">Recipes</a>
+      <a href="#">Photos</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="sights-town.html" class="dropbtn">Sights - In Town</a>
+    <div class="dropdown-content">
+      <a href="#">Landmarks</a>
+      <a href="#">Events</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="sights-field.html" class="dropbtn">Further Afield</a>
+    <div class="dropdown-content">
+      <a href="#">Nature</a>
+      <a href="#">Travel</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="architecture.html" class="dropbtn">Architecture</a>
+    <div class="dropdown-content">
+      <a href="#">Traditional</a>
+      <a href="#">Modern</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="health.html" class="dropbtn">Health</a>
+    <div class="dropdown-content">
+      <a href="#">Medicinal Plants</a>
+      <a href="#">Tips</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="visit.html" class="dropbtn">Visit</a>
+    <div class="dropdown-content">
+      <a href="#">Plan</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="contact.html" class="dropbtn">Contact</a>
+    <div class="dropdown-content">
+      <a href="#">Email</a>
+      <a href="#">Socials</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="about.html" class="dropbtn">About</a>
+    <div class="dropdown-content">
+      <a href="#">Mission</a>
+      <a href="#">Team</a>
+    </div>
+  </div>
+</nav>
 
-  <input type="search" placeholder="Search..." />
-</div>
-
-<div class="nav-container">
-  <nav>
-    <div class="dropdown">
-      <a href="index.html" class="dropbtn">Welcome</a>
-      <div class="dropdown-content"><a href="#">Subitem 1</a><a href="#">Subitem 2</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="hakka.html" class="dropbtn">Hakka Mauritians</a>
-      <div class="dropdown-content"><a href="#">History</a><a href="#">Culture</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="stories.html" class="dropbtn">Your Stories</a>
-      <div class="dropdown-content"><a href="#">Share</a><a href="#">Read</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="diaspora.html" class="dropbtn">Other Hakka Diaspora</a>
-      <div class="dropdown-content"><a href="#">Asia</a><a href="#">Africa</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="language.html" class="dropbtn">Language</a>
-      <div class="dropdown-content"><a href="#">Phrases</a><a href="#">Audio</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="history.html" class="dropbtn">History</a>
-      <div class="dropdown-content"><a href="#">Timeline</a><a href="#">Documents</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="food.html" class="dropbtn">Food</a>
-      <div class="dropdown-content"><a href="#">Recipes</a><a href="#">Photos</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="sights-town.html" class="dropbtn">Sights - In Town</a>
-      <div class="dropdown-content"><a href="#">Landmarks</a><a href="#">Events</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="sights-field.html" class="dropbtn">Further Afield</a>
-      <div class="dropdown-content"><a href="#">Nature</a><a href="#">Travel</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="architecture.html" class="dropbtn">Architecture</a>
-      <div class="dropdown-content"><a href="#">Traditional</a><a href="#">Modern</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="health.html" class="dropbtn">Health</a>
-      <div class="dropdown-content"><a href="#">Medicinal Plants</a><a href="#">Tips</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="visit.html" class="dropbtn">Visit</a>
-      <div class="dropdown-content"><a href="#">Plan</a><a href="#">Contact</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="contact.html" class="dropbtn">Contact</a>
-      <div class="dropdown-content"><a href="#">Email</a><a href="#">Socials</a></div>
-    </div>
-    <div class="dropdown">
-      <a href="about.html" class="dropbtn">About</a>
-      <div class="dropdown-content"><a href="#">Mission</a><a href="#">Team</a></div>
-    </div>
-  </nav>
-</div>
-
-<div class="content" id="main-content">
-  <h2 data-i18n="welcome">Welcome! 歡迎 : 欢迎！</h2>
-  <section class="example-image">
-    <img src="images/Ngai+he+hagka+ngin!.jpg?raw=true" alt="I am a Hakka person" />
-    <p><strong data-i18n="i_am_hakka">Ngai(2) hê(4) hag(5) ga(1) ngin(2)</strong> — "I am a Hakka person"</p>
-  </section>
-  <section class="example-image">
-    <p data-i18n="thank_you">Thank you for visiting!<br>This website is for anyone interested in Moiyan (officially Meixian), ancestral home of many Hakka people around the world, including the majority of Hakka-Mauritians.</p>
-    <img src="images/IMG_6907.jpg?raw=true" alt="Moiyan ancestral home" />
-  </section>
+<div class="content">
+  <main>
+    <h2>Welcome! 歡迎 : 欢迎！</h2>
+    <section class="example-image">
+      <img src="images/Ngai+he+hagka+ngin!.jpg?raw=true" alt="I am a Hakka person" />
+      <p><strong>Ngai(2) hê(4) hag(5) ga(1) ngin(2)</strong> — "I am a Hakka person"</p>
+    </section>
+    <section class="example-image">
+      <p><strong>Thank you for visiting!</strong><br>
+      This website is for anyone interested in Moiyan (officially Meixian), ancestral home of many Hakka people around the world, including the majority of Hakka-Mauritians.</p>
+      <img src="images/IMG_6907.jpg?raw=true" alt="Moiyan ancestral home" />
+    </section>
+  </main>
 </div>
 
 <footer>
-  <p>&copy; 2025 Hakka Mauritians 客家 | Built with ❤️ in Mauritius</p>
-  <p>Contact: hakkamauritians@gmail.com</p>
+  <p>&copy; 2025 Hakka Mauritians. All rights reserved.</p>
+  <p>Contact : hakkamauritians@gmail.com</p>
 </footer>
-
-<script>
-  const translations = {
-    en: {
-      welcome: "Welcome! 歡迎 : 欢迎！",
-      i_am_hakka: "Ngai(2) hê(4) hag(5) ga(1) ngin(2)",
-      thank_you: "Thank you for visiting!<br>This website is for anyone interested in Moiyan (officially Meixian), ancestral home of many Hakka people around the world, including the majority of Hakka-Mauritians."
-    },
-    fr: {
-      welcome: "Bienvenue ! 歡迎 : 欢迎！",
-      i_am_hakka: "Ngai(2) hê(4) hag(5) ga(1) ngin(2)",
-      thank_you: "Merci de votre visite !<br>Ce site s’adresse à toute personne intéressée par Moiyan (officiellement Meixian), berceau ancestral de nombreux Hakka dans le monde, y compris la majorité des Hakka-Mauriciens."
-    },
-    hak: {
-      welcome: "Yitngie! 歡迎 : 欢迎！",
-      i_am_hakka: "Ngai(2) hê(4) hag(5) ga(1) ngin(2)",
-      thank_you: "Siâ-siau ngi lai!<br>Ngi kiong sit yao Moiyan, ngin ti mo gà ho Hakka ngin."
-    },
-    zh: {
-      welcome: "欢迎！",
-      i_am_hakka: "我是客家人",
-      thank_you: "谢谢您的访问！<br>这个网站是为那些对梅县（即梅州）感兴趣的人准备的，那里是全球许多客家人的祖籍地，包括大多数的毛里求斯客家人。"
-    }
-  };
-
-  function changeLanguage(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      el.innerHTML = translations[lang][key] || el.innerHTML;
-    });
-  }
-</script>
 
 </body>
 </html>
